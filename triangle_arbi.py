@@ -6,9 +6,9 @@ import datetime
 import itchat
 
 PRIMARY = ['ETH', 'USDT', 'BTC'] # BNB excluded in advance
-BASEPOINT = 'BTC' # base point of triangle
-FEE = 0.0005 # if you have BNB asset
-BEPOINT = 1.0000 # the breakÅ]even point you can upgrade, ex. 1.0010 will be 1% profit
+BASEPOINT = 'BTC' # the base point(the first point) of triangle
+FEE = 0.0005 # if you have BNB assets, otherwise 0.0010
+BEPOINT = 1.0000 # the break even point you can upgrade, ex. 1.0010 = 1.0% profit
 EXCEPTION = 1
 NORMAL = 0
 #
@@ -72,6 +72,7 @@ def main():
                     print(f"sym:{symb},bas:{base_coin},{side},tic:{tick},col:{colm},ass:{asset:.4f},qua:{quan},pri:{sprice}")
                     order = client.create_test_order(symbol=pair, side=side, type='LIMIT', quantity=quan, price=sprice)
 #                   order = client.order_limit(symbol=pair, side=side, quantity=quan, price=sprice)
+#                   order = client.order_market(symbol=pair, side=side, quantity=quan)
                 except Exception as ex:
                     print(f"exception:{ex}")
                     print(f"break at tri_count:{triangle_count}! as symbol:{symb}")
