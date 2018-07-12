@@ -1,7 +1,10 @@
 # Binance_triangle_arbitrage_bot
 Proof-of-concept bot finding and trading triangle arbitrage on Binance
 # Requirements:
-Python3 & API of Python-Binance Python3 & Binance account(private key & secret key) & itchat(wechat push)
+Python3
+API of Python-Binance Python3
+Binance account(private key & secret key)
+itchat(wechat push)
 # Disclaimer:
 This bot is intended to be a Proof-of-concept. 
 The developer will not be responsible for Any losses that are made are as a result of using this tool. 
