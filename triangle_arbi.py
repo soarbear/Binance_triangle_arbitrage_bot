@@ -23,22 +23,22 @@ def main():
     loop_count = 0
     triangle_count = 0
     exinfo = get_exinfo(client)
-#   print(f"exinfo:{exinfo}")
+#   print(f"[info]exinfo:{exinfo}")
     while(True):
         start_time = time()
         prices = get_prices(client)
-#       print(f"prices:{prices}")
+#       print(f"[info]prices:{prices}")
         prices_time = time()
         download_time = prices_time-start_time
         if (download_time > 0.5):
-            print(f"Downloaded in {download_time:.4f}s, Sleep 2s...")
+            print(f"[info]downloaded in {download_time:.4f}s, Sleep 2s...")
             sleep(2)
             continue
         else:
-            print(f"Downloaded in: {prices_time-start_time:.4f}s")
+            print(f"[info]downloaded in: {prices_time-start_time:.4f}s")
         triangles = list(find_triangles(prices))
         computing_time = time()
-        print(f"Computed in: {computing_time-prices_time:.4f}s")
+        print(f"[info]computed in: {computing_time-prices_time:.4f}s")
         if triangles:
             sorted(triangles, key=itemgetter('profit'), reverse=True)
             triangle = triangles[0]
@@ -70,13 +70,13 @@ def main():
                     else:
                         sprice = f"{price:.8f}"
                     quan = ceiling(asset, colm)
-                    print(f"sym:{symb},bas:{base_coin},{side},tic:{tick},col:{colm},ass:{asset:.4f},qua:{quan},pri:{sprice}")
+                    print(f"[info]sym:{symb},bas:{base_coin},{side},tic:{tick},col:{colm},ass:{asset:.4f},qua:{quan},pri:{sprice}")
                     order = client.create_test_order(symbol=pair, side=side, type='LIMIT', quantity=quan, price=sprice)
 #                   order = client.order_limit(symbol=pair, side=side, quantity=quan, price=sprice)
 #                   order = client.order_market(symbol=pair, side=side, quantity=quan)
                 except Exception as ex:
-                    print(f"exception:{ex}")
-                    print(f"break at tri_count:{triangle_count}! as symbol:{symb}")
+                    print(f"[info]exception:{ex}")
+                    print(f"[info]break at tri_count:{triangle_count}! as symbol:{symb}")
                     status = EXCEPTION
                     break
             if status == EXCEPTION:
@@ -88,7 +88,7 @@ def main():
         else:
             sleep(0.2)
         loop_count += 1
-    print(f"tri_count/loop_count:{triangle_count}/{loop_count}")
+    print(f"[info]tri_count/loop_count:{triangle_count}/{loop_count}")
     itchat.send('[info]exception:tri_count/loop_count:'+str(triangle_count)+'/'+str(loop_count), toUserName='filehelper')
 #
 # prepare exchange information
