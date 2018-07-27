@@ -2,7 +2,7 @@
 Proof-of-concept bot finding and trading triangle arbitrage on Binance.
 # Requirements:
 1. Python3.6 or above<br> 
-2. API of Python-Binance Python3.6 or above<br>
+2. API of Python-Binance<br>
 3. Binance account(api_key & api_secret)<br>
 4. itchat(wechat push notification, can be commented)
 # Disclaimer:
