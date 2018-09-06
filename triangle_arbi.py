@@ -9,7 +9,7 @@ import itchat
 PRIMARY = ['ETH', 'USDT', 'BTC'] # BNB excluded in advance
 BASEPOINT = 'BTC' # the base point(first point) of triangle
 FEE = 0.0005 # if you have BNB assets, otherwise FEE = 0.0010
-BEPOINT = 1.0000 # break even point you can upgrade, ex. 1.0010 = 1.0% profit
+BEPOINT = 1.0000 # break even point you can upgrade, ex. 1.0100 = 1.0% profit
 EXCEPTION = 1
 NORMAL = 0
 #
