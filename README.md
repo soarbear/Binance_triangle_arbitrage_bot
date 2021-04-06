@@ -1,5 +1,5 @@
 # Description:
-Proof-of-concept bot finding and trading triangle arbitrage on Binance.
+Proof-of-concept bot finding and trading triangle arbitrage on Binance. It is NOT the bot making money.
 # Requirements:
 1. Python3.6 or above<br> 
 2. API of Python-Binance<br>
