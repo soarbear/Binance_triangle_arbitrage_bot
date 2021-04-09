@@ -1,6 +1,6 @@
 # Description
 
-Proof-of-concept robot finding and trading triangle arbitrage on Binance by using recursice algorithm in python. 
+Proof-of-concept robot finding and trading triangle arbitrage on Binance using recursie algorithm in python. 
 
 It is NOT the robot making money.
 
