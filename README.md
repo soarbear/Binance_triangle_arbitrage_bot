@@ -20,7 +20,7 @@ This robot is intended to be a Proof-of-concept.
 
 The developer will not be responsible for Any losses made by using or referring to the robot.
 
-Understand the risks involved, using or referring to the bot on your own responsibility.
+Understand the risks involved, using or referring to the robot on your own responsibility.
 
 On experience of severial days, triangle arbitrage bot did not make profit as the market prices
 
